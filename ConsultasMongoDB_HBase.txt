@@ -1,0 +1,166 @@
+# MongoDB
+# Insertar un producto
+db.productos.insertOne({
+  "id_producto": "PRD051",
+  "nombre": "Kit Regalo Ekos Maracuyá",
+  "descripcion": "Kit especial con crema hidratante y aceite corporal de maracuyá",
+  "id_categoria": "CAT001",
+  "subcategoria": "Kits",
+  "precio": 89.90,
+  "en_descuento": true,
+  "porcentaje_descuento": 20,
+  "rating": 4.9
+})
+
+# Obtener todos los productos
+db.productos.find({})
+
+# Obtener un producto por id
+db.productos.findOne({ "id_producto": "PRD001" })
+
+# Aplicar/actualizar un descuento a un producto determinado
+db.productos.updateOne(
+  { "id_producto": "PRD001" },
+  { $set: { "en_descuento": true, "porcentaje_descuento": 20 } }
+)
+
+# Eliminar un producto
+db.productos.deleteOne({ "id_producto": "PRD051" })
+
+# Consulta de los productos con un porcentaje de descuento mayor a 15
+db.productos.find({
+  "porcentaje_descuento": { $gt: 15 }
+})
+
+# Consulta de productos por una categoria especifica con un rating mayor o igual a 4.5
+db.productos.find({
+  "id_categoria": "CAT001",
+  "rating": { $gte: 4.5 }
+})
+
+# Consulta productos con stock bajo usando lookup (devuelve los productos que están por debajo del stock minimo)
+db.inventarios.aggregate([
+  { 
+    $match: { 
+      $expr: { $lt: ["$stock", "$stock_minimo"] } 
+    } 
+  },
+  {
+    $lookup: {
+      from: "productos",
+      localField: "id_producto",
+      foreignField: "id_producto",
+      as: "producto"
+    }
+  },
+  { $unwind: "$producto" }
+])
+
+# consulta todas las ubicaciones y la suma de los productos para cada una
+db.inventarios.aggregate([
+  {
+    $lookup: {
+      from: "productos",
+      localField: "id_producto",
+      foreignField: "id_producto",
+      as: "producto"
+    }
+  },
+  { $unwind: "$producto" },
+  {
+    $group: {
+      _id: "$ubicacion",
+      valorTotal: { 
+        $sum: { 
+          $divide: [
+            { $multiply: ["$stock", "$producto.precio"] },
+            100
+          ]
+        }
+      }
+    }
+  }
+])
+
+# Consulta el precio promedio de los productos por cada una de las categorías
+db.productos.aggregate([
+  {
+    $group: {
+      _id: "$id_categoria",
+      precioPromedio: { $avg: "$precio" },
+      cantidadProductos: { $sum: 1 }
+    }
+  },
+  {
+    $lookup: {
+      from: "categorias",
+      localField: "_id",
+      foreignField: "id_categoria",
+      as: "categoria"
+    }
+  },
+  { $unwind: "$categoria" },
+  {
+    $project: {
+      categoria: "$categoria.nombre",
+      precioPromedio: {
+        $round: ["$precioPromedio", 2] 
+      },
+      cantidadProductos: 1
+    }
+  }
+])
+
+# Muestra el top 5 de los productos mejor valorados (devuelve los 5 productos que tienen mejor rating)
+db.productos.aggregate([
+  { $sort: { "rating": -1 } },
+  { $limit: 5 },
+  {
+    $project: {
+      _id: 0,
+      nombre: 1,
+      precio: 1,
+      rating: 1
+    }
+  }
+])
+
+
+
+
+
+
+
+# HBase:
+# Operaciones de lectura:
+# Leer un registro
+get 'accidents_data', 'b0dd6f57'
+
+#  
+scan 'accidents_data', {LIMIT => 10}
+
+# 
+scan 'accidents_data', {COLUMNS => ['location:place', 'stats:casualties'], LIMIT => 5}
+
+
+# Operaciones de escritura:
+# Crear un nuevo registro
+put 'accidents_data', 'new_accident1', 'accident_info:date', '2023-12-01'
+put 'accidents_data', 'new_accident1', 'accident_info:time', '12:30'
+put 'accidents_data', 'new_accident1', 'location:place', 'Madrid, Spain'
+put 'accidents_data', 'new_accident1', 'location:latitude', '40.4168'
+put 'accidents_data', 'new_accident1', 'location:longitude', '-3.7038'
+
+# Actualizar un nuevo registro
+put 'accidents_data', 'b0dd6f57', 'stats:casualties', '8'
+
+# Eliminar un registro
+deleteall 'accidents_data', 'new_accident1'
+
+# Eliminar un dato de un registro
+delete 'accidents_data', 'new_accident1', 'location:place'
+
+
+# Consultas utilies
+# Muestra accidentes por condición climatica
+scan 'accidents_data', {COLUMNS => ['conditions:weather'], LIMIT => 10}

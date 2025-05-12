@@ -1,0 +1,62 @@
+[
+  {
+    "id_categoria": "CAT001",
+    "nombre": "Cuidado Facial",
+    "subcategorias": ["Hidratantes", "Limpiadores", "Serums"],
+    "descripcion": "Productos para el cuidado diario del rostro"
+  },
+  {
+    "id_categoria": "CAT002",
+    "nombre": "Cuidado Capilar",
+    "subcategorias": ["Shampoo", "Acondicionador", "Tratamientos"],
+    "descripcion": "Productos para el cuidado del cabello"
+  },
+  {
+    "id_categoria": "CAT003",
+    "nombre": "Maquillaje",
+    "subcategorias": ["Labios", "Ojos", "Rostro"],
+    "descripcion": "Productos de maquillaje y cosméticos"
+  },
+  {
+    "id_categoria": "CAT004",
+    "nombre": "Perfumería",
+    "subcategorias": ["Perfumes Mujer", "Perfumes Hombre", "Colonias"],
+    "descripcion": "Fragancias y perfumes"
+  },
+  {
+    "id_categoria": "CAT005",
+    "nombre": "Cuidado Personal",
+    "subcategorias": ["Desodorantes", "Jabones", "Cremas Corporales"],
+    "descripcion": "Productos para higiene y cuidado diario"
+  },
+  {
+    "id_categoria": "CAT006",
+    "nombre": "Solar",
+    "subcategorias": ["Protector Facial", "Protector Corporal", "After Sun"],
+    "descripcion": "Productos para protección solar"
+  },
+  {
+    "id_categoria": "CAT007",
+    "nombre": "Hombre",
+    "subcategorias": ["Cuidado Facial", "Cuidado Capilar", "Fragancias"],
+    "descripcion": "Línea especializada para hombres"
+  },
+  {
+    "id_categoria": "CAT008",
+    "nombre": "Infantil",
+    "subcategorias": ["Baño", "Hidratación", "Protección Solar"],
+    "descripcion": "Productos para niños"
+  },
+  {
+    "id_categoria": "CAT009",
+    "nombre": "Bienestar",
+    "subcategorias": ["Aromaterapia", "Sales de Baño", "Velas"],
+    "descripcion": "Productos para relajación y bienestar"
+  },
+  {
+    "id_categoria": "CAT010",
+    "nombre": "Hogar",
+    "subcategorias": ["Aromatizantes", "Velas", "Difusores"],
+    "descripcion": "Productos para ambientación del hogar"
+  }
+]

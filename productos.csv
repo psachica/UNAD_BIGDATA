@@ -1,0 +1,51 @@
+id_producto,nombre,descripcion,id_categoria,subcategoria,precio,en_descuento,porcentaje_descuento,rating
+PRD001,Crema Hidratante Ekos Maracuyá,Crema hidratante con extracto de maracuyá,CAT001,Hidratantes,45.9,true,15,4.7
+PRD002,Shampoo Kaiak Aventura,Shampoo para cabello normal,CAT002,Shampoo,32.5,false,0,4.5
+PRD003,Desodorante Humor Frescor,Desodorante colonia en crema,CAT005,Desodorantes,28.9,true,14,4.8
+PRD004,Máscara de Pestañas Una,Máscara para pestañas efecto volumen,CAT003,Ojos,39.9,true,13,4.6
+PRD005,Protector Solar Facial FPS 60,Protector solar de rápida absorción,CAT006,Protector Facial,59.9,false,0,4.9
+PRD006,Acondicionador Ekos Castaña,Acondicionador nutritivo,CAT002,Acondicionador,42.5,true,13,4.7
+PRD007,Perfume Essencial Elixir,Fragancia sofisticada,CAT004,Perfumes Mujer,149.9,true,13,4.8
+PRD008,Jabón Líquido Tododia Algodón,Jabón líquido suave,CAT005,Jabones,22.9,true,13,4.4
+PRD009,Serum Facial Lumina,Serum iluminador con vitamina C,CAT001,Serums,89.9,true,11,4.7
+PRD010,Bálsamo Labial Ekos Ucuuba,Bálsamo hidratante para labios,CAT001,Labios,25.9,false,0,4.6
+PRD011,Crema Corporal Tododia Cereza,Crema corporal hidratante,CAT005,Cremas Corporales,35.9,true,12,4.5
+PRD012,Esmalte Una Rosa Clásico,Esmalte de larga duración,CAT003,Labios,19.9,true,15,4.3
+PRD013,Gel de Limpieza Facial,Gel limpiador para rostro,CAT001,Limpiadores,38.9,false,0,4.6
+PRD014,Perfume Kaiak Oceano,Fragancia fresca masculina,CAT004,Perfumes Hombre,129.9,true,10,4.7
+PRD015,Aceite Corporal Ekos Patauá,Aceite hidratante corporal,CAT005,Cremas Corporales,49.9,true,14,4.8
+PRD016,Base Líquida Una,Base de maquillaje ligera,CAT003,Rostro,65.9,false,0,4.5
+PRD017,Protector Solar Corporal FPS 30,Protector solar para cuerpo,CAT006,Protector Corporal,52.9,true,12,4.7
+PRD018,Shampoo Infantil Meu Primeiro,Shampoo suave para bebés,CAT008,Baño,28.9,false,0,4.9
+PRD019,Crema de Manos Ekos Açaí,Crema hidratante para manos,CAT005,Cremas Corporales,29.9,true,15,4.6
+PRD020,Labial Liquido Una,Labial de larga duración,CAT003,Labios,45.9,true,10,4.4
+PRD021,Agua Micelar Lumina,Agua limpiadora micelar,CAT001,Limpiadores,42.9,false,0,4.7
+PRD022,Colonia Infantil Meu Primeiro,Colonia suave para bebés,CAT008,Baño,34.9,true,10,4.8
+PRD023,Crema para Pies Ekos Andiroba,Crema nutritiva para pies,CAT005,Cremas Corporales,32.9,true,12,4.5
+PRD024,Rubor en Polvo Una,Rubor compacto mate,CAT003,Rostro,39.9,false,0,4.3
+PRD025,After Sun Hidratante,Crema post-solar hidratante,CAT006,After Sun,47.9,true,15,4.7
+PRD026,Gel de Baño Kaiak Energia,Gel de baño energizante,CAT007,Cuidado Facial,26.9,false,0,4.4
+PRD027,Máscara Facial Lumina,Máscara facial iluminadora,CAT001,Serums,29.9,true,14,4.6
+PRD028,Desodorante Roll-on Hombre,Desodorante roll-on masculino,CAT007,Cuidado Facial,31.9,true,10,4.5
+PRD029,Aceite Esencial Lavanda,Aceite esencial para aromaterapia,CAT009,Aromaterapia,39.9,false,0,4.8
+PRD030,Difusor de Ambiente Ekos,Difusor para ambientación,CAT010,Difusores,59.9,true,12,4.6
+PRD031,Crema de Noche Lumina,Crema facial nutritiva nocturna,CAT001,Hidratantes,69.9,true,15,4.7
+PRD032,Tratamiento Capilar Ekos,Máscara capilar reconstructora,CAT002,Tratamientos,54.9,false,0,4.8
+PRD033,Sombra de Ojos Una,Paleta de sombras mate,CAT003,Ojos,49.9,true,10,4.5
+PRD034,Colonia Kaiak Essencial,Colonia fresca masculina,CAT004,Colonias,89.9,true,12,4.6
+PRD035,Jabón en Barra Tododia,Jabón natural en barra,CAT005,Jabones,18.9,false,0,4.4
+PRD036,Protector Solar Infantil FPS 50,Protector solar para niños,CAT008,Protección Solar,49.9,true,14,4.9
+PRD037,Loción Corporal Hidratante,Loción corporal de rápida absorción,CAT005,Cremas Corporales,42.9,true,10,4.6
+PRD038,Delineador de Ojos Una,Delineador líquido de larga duración,CAT003,Ojos,35.9,false,0,4.4
+PRD039,Perfume Luna,Fragancia floral femenina,CAT004,Perfumes Mujer,159.9,true,15,4.8
+PRD040,Sales de Baño Relajantes,Sales minerales para baño,CAT009,Sales de Baño,39.9,true,12,4.7
+PRD041,Vela Aromática Ekos,Vela aromatizante natural,CAT010,Velas,45.9,false,0,4.5
+PRD042,Tónico Facial Lumina,Tónico refrescante para rostro,CAT001,Limpiadores,47.9,true,13,4.6
+PRD043,Acondicionador Kaiak,Acondicionador para cabello normal a graso,CAT002,Acondicionador,36.9,true,10,4.5
+PRD044,Polvo Compacto Una,Base en polvo compacta,CAT003,Rostro,55.9,false,0,4.4
+PRD045,Desodorante en Barra Hombre,Desodorante antitranspirante,CAT007,Cuidado Facial,29.9,true,15,4.6
+PRD046,Crema Solar Facial FPS 70,Protector solar facial alta protección,CAT006,Protector Facial,64.9,true,12,4.8
+PRD047,Aceite Esencial Eucalipto,Aceite esencial descongestionante,CAT009,Aromaterapia,39.9,false,0,4.7
+PRD048,Aromatizador de Ambientes,Spray aromatizante para hogar,CAT010,Aromatizantes,32.9,true,10,4.5
+PRD049,Crema para Contorno de Ojos,Crema anti-ojeras y bolsas,CAT001,Hidratantes,59.9,true,15,4.6
+PRD050,Perfume Essencial Feminino,Fragancia floral sofisticada,CAT004,Perfumes Mujer,149.9,true,12,4.8
