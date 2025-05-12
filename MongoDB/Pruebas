@@ -1,0 +1,10 @@
+db.productos.aggregate([
+  { $limit: 5 },
+  {
+    $project: {
+      nombre: 1,
+      precioAlmacenado: "$precio",
+      tipoDato: { $type: "$precio" }
+    }
+  }
+])
